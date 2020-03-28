@@ -6,3 +6,4 @@ cache:
 
 script:
   - mvn clean test
+  - mvn checkstyle:check
