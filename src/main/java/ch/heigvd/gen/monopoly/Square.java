@@ -1,4 +1,4 @@
-package java.ch.heigvd.gen.monopoly;
+package ch.heigvd.gen.monopoly;
 
 public class Square {
   private String name;

@@ -2,19 +2,18 @@ package ch.heigvd.gen.monopoly;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.ch.heigvd.gen.monopoly.Board;
 import org.junit.jupiter.api.Test;
 
-public class TestBoard {
+public class BoardTest {
   @Test
-  public void testOutsideOfBoundariesLower() {
+  public void testGetSquareThrowsWhenUnderflow() {
     int index = -1;
     Board board = new Board();
     assertThrows(IndexOutOfBoundsException.class, () -> board.getSquare(index));
   }
 
   @Test
-  public void testOutsideOfBoundariesUpper() {
+  public void testGetSquareThrowsWhenOverflow() {
     int index = 1000;
     Board board = new Board();
     assertThrows(IndexOutOfBoundsException.class, () -> board.getSquare(index));
