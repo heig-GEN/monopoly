@@ -31,7 +31,7 @@ public class Board {
    */
   public Square getSquare(Square location, int stepsCount) {
     int index = squares.indexOf(location);
-    return squares.get(index + stepsCount);
+    return squares.get((index + stepsCount) % squares.size());
   }
 
   /**
