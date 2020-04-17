@@ -51,7 +51,9 @@ public class MonopolyGame {
   }
 
   private void playRound() {
-
+    for (Player p : players) {
+      p.takeTurn(dice, board);
+    }
   }
 
 }
