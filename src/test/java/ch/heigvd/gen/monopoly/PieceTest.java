@@ -14,18 +14,18 @@ public class PieceTest {
   @BeforeEach
   public void setup() {
     existingLocation = new Square("Paradeplatz");
-    existingPiece = new Piece(existingLocation);
+    existingPiece = new Piece("Shoe", existingLocation);
   }
 
   @Test
   public void testNewPieceHasNonNullLocation() {
-    Piece piece = new Piece(existingLocation);
+    Piece piece = new Piece("Shoe", existingLocation);
     assertNotNull(piece.getLocation());
   }
 
   @Test
   public void testNewPieceHasExactlyOneLocation() {
-    assertThrows(NullPointerException.class, () -> new Piece(null));
+    assertThrows(NullPointerException.class, () -> new Piece("Shoe", null));
   }
 
   @Test
