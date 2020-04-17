@@ -7,7 +7,8 @@ public class Piece {
   private Square location;
   private String name;
 
-  public Piece(Square location) {
+  public Piece(String name, Square location) {
+    this.name = name;
     this.location = Objects.requireNonNull(location);
   }
 
