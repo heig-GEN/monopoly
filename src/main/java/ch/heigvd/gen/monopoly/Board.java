@@ -1,6 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
 public class Board {
+
   private static int NUMBER_OF_SQUARES = 40;
   private static String SQUARE_NAME = "Square #";
 
@@ -16,6 +17,10 @@ public class Board {
     for (int i = 0; i < NUMBER_OF_SQUARES; i++) {
       squares[i] = new Square(SQUARE_NAME + i);
     }
+  }
+
+  public Square getSquare(Square location, int stepsCount) {
+    return null;
   }
 
   /**
