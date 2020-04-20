@@ -2,6 +2,7 @@ package ch.heigvd.gen.monopoly;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import ch.heigvd.gen.monopoly.squares.Square;
 import org.junit.jupiter.api.Test;
 
 public class BoardTest {

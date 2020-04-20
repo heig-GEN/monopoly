@@ -1,5 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.squares.Square;
+
 public class Player {
 
   private Piece piece;

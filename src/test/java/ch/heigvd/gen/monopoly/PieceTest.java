@@ -3,6 +3,7 @@ package ch.heigvd.gen.monopoly;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import ch.heigvd.gen.monopoly.squares.Square;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
