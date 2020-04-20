@@ -24,7 +24,7 @@ public class Board {
     squares.add(new GoSquare("Go!"));
     for (int i = 1; i < NUMBER_OF_SQUARES; i++) {
       if (i == 15 || i == 30) {
-        squares.add(new TaxIncomeSquare("Income tax " + (i % 15)));
+        squares.add(new TaxIncomeSquare("Income tax " + (i / 15)));
       } else {
         squares.add(new RegularSquare(SQUARE_NAME + i));
       }
