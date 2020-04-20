@@ -7,7 +7,7 @@ import java.util.List;
 public class MonopolyGame {
 
   private static final int DEFAULT_NUMBER_PLAYER = 3;
-  private static final int NUMBER_OF_ROUNDS = 30;
+  private static final int NUMBER_OF_ROUNDS = 20;
 
   private final Board board;
   private final List<Player> players;
