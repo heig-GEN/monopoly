@@ -3,6 +3,7 @@ package ch.heigvd.gen.monopoly;
 import ch.heigvd.gen.monopoly.squares.GoSquare;
 import ch.heigvd.gen.monopoly.squares.RegularSquare;
 import ch.heigvd.gen.monopoly.squares.Square;
+import ch.heigvd.gen.monopoly.squares.TaxIncomeSquare;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,11 @@ public class Board {
     squares = new ArrayList<>();
     squares.add(new GoSquare("Go!"));
     for (int i = 1; i < NUMBER_OF_SQUARES; i++) {
-      squares.add(new RegularSquare(SQUARE_NAME + i));
+      if (i == 15 || i == 30) {
+        squares.add(new TaxIncomeSquare("Income tax " + (i / 15)));
+      } else {
+        squares.add(new RegularSquare(SQUARE_NAME + i));
+      }
     }
   }
 
