@@ -18,7 +18,7 @@ public class Player {
   public Player(String name, Square location) {
     this.name = name;
     this.piece = new Piece(String.format("Piece for %s", name), location);
-    this.cash = 1000;
+    this.cash = 1500;
   }
 
   public String getName() {
