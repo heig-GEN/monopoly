@@ -1,5 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.random.Cup;
 import ch.heigvd.gen.monopoly.squares.Square;
 
 public class Player {
@@ -19,17 +20,13 @@ public class Player {
   /**
    * Lets a {@link Player} take a turn, and move their own {@link Piece}.
    *
-   * @param dice  The {@link Die} array that the player should use.
+   * @param cup   The {@link Cup} that the player should use.
    * @param board The {@link Board} on which actions take place.
    */
-  public void takeTurn(Die[] dice, Board board) {
-    int sum = 0;
-    for (Die die : dice) {
-      die.roll();
-      sum += die.getFaceValue();
-    }
+  public void takeTurn(Cup cup, Board board) {
+    cup.roll();
     Square oldLoc = piece.getLocation();
-    Square newLoc = board.getSquare(oldLoc, sum);
+    Square newLoc = board.getSquare(oldLoc, cup.getTotal());
     piece.setLocation(newLoc);
   }
 }
