@@ -9,6 +9,12 @@ public class Player {
   private String name;
   private int cash;
 
+  /**
+   * Creates a new {@link Player}.
+   *
+   * @param name     The name of this player.
+   * @param location The square on which the player starts.
+   */
   public Player(String name, Square location) {
     this.name = name;
     this.piece = new Piece(String.format("Piece for %s", name), location);
