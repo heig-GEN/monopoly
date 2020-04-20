@@ -23,19 +23,19 @@ public class PlayerTest {
 
   @Test
   public void testNewPlayerHasSomeMoney() {
-    assertEquals(1000, player.getNetWorth());
+    assertEquals(1500, player.getNetWorth());
   }
 
   @Test
   public void testPlayerLosesRightAmountOfMoney() {
     player.reduceCash(200);
-    assertEquals(800, player.getNetWorth());
+    assertEquals(1300, player.getNetWorth());
   }
 
   @Test
   public void testPlayerEarnsRightAmountOfMoney() {
     player.addCash(300);
-    assertEquals(1300, player.getNetWorth());
+    assertEquals(1800, player.getNetWorth());
   }
 
   @Test
@@ -55,6 +55,6 @@ public class PlayerTest {
 
   @Test
   public void testPlayerMayLoseAllOfWhatTheyHave() {
-    assertDoesNotThrow(() -> player.reduceCash(1000));
+    assertDoesNotThrow(() -> player.reduceCash(player.getNetWorth()));
   }
 }
