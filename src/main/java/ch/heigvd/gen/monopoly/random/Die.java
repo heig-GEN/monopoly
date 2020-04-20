@@ -1,4 +1,4 @@
-package ch.heigvd.gen.monopoly;
+package ch.heigvd.gen.monopoly.random;
 
 public class Die {
 
