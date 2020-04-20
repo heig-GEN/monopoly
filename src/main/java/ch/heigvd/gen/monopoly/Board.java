@@ -1,5 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.squares.RegularSquare;
+import ch.heigvd.gen.monopoly.squares.Square;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class Board {
   public Board() {
     squares = new ArrayList<>();
     for (int i = 0; i < NUMBER_OF_SQUARES; i++) {
-      squares.add(new Square(SQUARE_NAME + i));
+      squares.add(new RegularSquare(SQUARE_NAME + i));
     }
   }
 

@@ -1,6 +1,7 @@
 package ch.heigvd.gen.monopoly;
 
 import ch.heigvd.gen.monopoly.random.Cup;
+import ch.heigvd.gen.monopoly.squares.Square;
 
 public class Player {
 
