@@ -1,6 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
-import ch.heigvd.gen.monopoly.random.Die;
+import ch.heigvd.gen.monopoly.random.Cup;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class MonopolyGame {
 
   private final Board board;
   private final List<Player> players;
-  private final Die[] dice;
+  private final Cup cup;
 
   private int roundCnt;
 
@@ -35,7 +35,7 @@ public class MonopolyGame {
   public MonopolyGame(int numOfPlayer) {
     this.board = new Board();
     this.players = new ArrayList<>();
-    this.dice = new Die[] { new Die(), new Die()};
+    this.cup = new Cup();
 
     for (int i = 0; i < numOfPlayer; i++) {
       this.players.add(new Player(
@@ -75,7 +75,7 @@ public class MonopolyGame {
 
   private void playRound() {
     for (Player p : players) {
-      p.takeTurn(dice, board);
+      p.takeTurn(cup, board);
     }
   }
 
