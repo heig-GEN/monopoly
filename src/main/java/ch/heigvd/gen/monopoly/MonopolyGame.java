@@ -33,6 +33,9 @@ public class MonopolyGame {
    * @param numOfPlayer The number of players you want in the game
    */
   public MonopolyGame(int numOfPlayer) {
+    if (numOfPlayer < 2 || numOfPlayer > 8) {
+      throw new IllegalArgumentException("You must provide between 2 and 8 players.");
+    }
     this.board = new Board();
     this.players = new ArrayList<>();
     this.cup = new Cup();
