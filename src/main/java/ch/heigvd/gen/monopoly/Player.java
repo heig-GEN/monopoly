@@ -5,9 +5,9 @@ public class Player {
   private Piece piece;
   private String name;
 
-  public Player(String name) {
+  public Player(String name, Square location) {
     this.name = name;
-    this.piece = new Piece(name, null);
+    this.piece = new Piece(String.format("Piece for %s", name), location);
   }
 
   public String getName() {
