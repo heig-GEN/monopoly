@@ -14,5 +14,6 @@ public class GoToJailSquare extends Square {
   @Override
   public void landedOn(Player p) {
     p.setLocation(jail);
+    jail.landedOn(p);
   }
 }
