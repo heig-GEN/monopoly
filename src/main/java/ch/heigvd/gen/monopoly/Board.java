@@ -35,16 +35,10 @@ public class Board {
   }
 
   /**
-   * Get the square at given index.
-   * @param i The index corresponding to the wanted square
-   * @return The square at index i
+   * Returns the starting square.
+   * @return The starting square
    */
-  public Square getSquare(int i) {
-    if (0 < i  || i > NUMBER_OF_SQUARES) {
-      throw new IndexOutOfBoundsException("There are only " + NUMBER_OF_SQUARES
-          + " on a monopoly board.");
-    }
-
-    return squares.get(i);
+  public Square getInitialSquare() {
+    return squares.get(0);
   }
 }
