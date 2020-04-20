@@ -5,7 +5,6 @@ import java.util.List;
 
 public class MonopolyGame {
 
-  private static final int NUMBER_OF_DICE = 2;
   private static final int DEFAULT_NUMBER_PLAYER = 3;
   private static final int NUMBER_OF_ROUNDS = 30;
 
