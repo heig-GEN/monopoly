@@ -36,7 +36,7 @@ public class MonopolyGame {
     this.dice = new Die[NUMBER_OF_DICE];
 
     for (int i = 0; i < numOfPlayer; i++) {
-      this.players.add(new Player());
+      this.players.add(new Player(String.format("Player #%d", numOfPlayer)));
     }
   }
 

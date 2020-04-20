@@ -3,6 +3,16 @@ package ch.heigvd.gen.monopoly;
 public class Player {
 
   private Piece piece;
+  private String name;
+
+  public Player(String name) {
+    this.name = name;
+    this.piece = new Piece(name, null);
+  }
+
+  public String getName() {
+    return name;
+  }
 
   /**
    * Lets a {@link Player} take a turn, and move their own {@link Piece}.
