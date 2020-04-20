@@ -1,5 +1,6 @@
 package ch.heigvd.gen.monopoly;
 
+import ch.heigvd.gen.monopoly.random.Die;
 import java.util.ArrayList;
 import java.util.List;
 

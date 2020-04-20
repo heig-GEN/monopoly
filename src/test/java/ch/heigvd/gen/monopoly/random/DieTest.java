@@ -1,4 +1,4 @@
-package ch.heigvd.gen.monopoly;
+package ch.heigvd.gen.monopoly.random;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
