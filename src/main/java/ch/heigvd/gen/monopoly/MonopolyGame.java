@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MonopolyGame {
-  private static final int NUMBER_OF_DICE = 2;
+
   private static final int DEFAULT_NUMBER_PLAYER = 3;
   private static final int NUMBER_OF_ROUNDS = 30;
 
@@ -28,12 +28,13 @@ public class MonopolyGame {
    * Monopoly Game constructor.
    *
    * <p>Will initialize the game</p>
+   *
    * @param numOfPlayer The number of players you want in the game
    */
   public MonopolyGame(int numOfPlayer) {
     this.board = new Board();
     this.players = new ArrayList<>();
-    this.dice = new Die[NUMBER_OF_DICE];
+    this.dice = new Die[] { new Die(), new Die()};
 
     for (int i = 0; i < numOfPlayer; i++) {
       this.players.add(new Player(
@@ -42,6 +43,23 @@ public class MonopolyGame {
           )
       );
     }
+  }
+
+  /**
+   * The main entry point of the program.
+   *
+   * @param args The input arguments.
+   */
+  public static void main(String[] args) {
+
+    if (args.length != 1) {
+      throw new ArrayIndexOutOfBoundsException("Please use 1 argument.");
+    }
+
+    int players = Integer.parseInt(args[0]);
+    System.out.println(String.format("You're playing Monopoly with %d players !", players));
+    MonopolyGame game = new MonopolyGame(players);
+    game.playGame();
   }
 
   /**
