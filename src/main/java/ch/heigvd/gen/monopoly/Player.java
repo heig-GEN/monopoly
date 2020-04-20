@@ -9,9 +9,16 @@ public class Player {
   private String name;
   private int cash;
 
+  /**
+   * Creates a new {@link Player}.
+   *
+   * @param name     The name of this player.
+   * @param location The square on which the player starts.
+   */
   public Player(String name, Square location) {
     this.name = name;
     this.piece = new Piece(String.format("Piece for %s", name), location);
+    this.cash = 1000;
   }
 
   public String getName() {
@@ -51,7 +58,7 @@ public class Player {
    * @throws IllegalArgumentException is thrown if the amount is < 0
    */
   public void reduceCash(int amount) {
-    if (amount < 0) {
+    if (amount < 0 || cash - amount < 0) {
       throw new IllegalArgumentException("Amount should be positive.");
     }
     cash -= amount;
