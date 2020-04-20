@@ -5,7 +5,7 @@ import ch.heigvd.gen.monopoly.squares.Square;
 
 public class Player {
 
-  private Piece piece;
+  private Square location;
   private String name;
   private int cash;
 
@@ -17,7 +17,7 @@ public class Player {
    */
   public Player(String name, Square location) {
     this.name = name;
-    this.piece = new Piece(String.format("Piece for %s", name), location);
+    this.location = location;
     this.cash = 1000;
   }
 
@@ -25,17 +25,19 @@ public class Player {
     return name;
   }
 
+  public void setLocation(Square location) {
+    this.location = location;
+  }
+
   /**
-   * Lets a {@link Player} take a turn, and move their own {@link Piece}.
+   * Lets a {@link Player} take a turn, and move their own location.
    *
    * @param cup   The {@link Cup} that the player should use.
    * @param board The {@link Board} on which actions take place.
    */
   public void takeTurn(Cup cup, Board board) {
     cup.roll();
-    Square oldLoc = piece.getLocation();
-    Square newLoc = board.getSquare(oldLoc, cup.getTotal());
-    piece.setLocation(newLoc);
+    this.location = board.getSquare(this.location, cup.getTotal());
   }
 
   /**
