@@ -11,6 +11,7 @@ public class GoSquare extends Square {
 
   @Override
   public void landedOn(Player p) {
+    super.landedOn(p);
     p.addCash(CASH_AMOUNT);
   }
 }

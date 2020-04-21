@@ -10,6 +10,7 @@ public class TaxIncomeSquare extends Square {
 
   @Override
   public void landedOn(Player p) {
+    super.landedOn(p);
     int money = p.getNetWorth();
     int reduced = Math.floorDiv(money, 10);
     p.reduceCash(Math.min(200, reduced));

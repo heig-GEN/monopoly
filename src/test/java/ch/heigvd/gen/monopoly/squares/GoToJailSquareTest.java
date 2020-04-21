@@ -17,6 +17,7 @@ public class GoToJailSquareTest extends SquareTest {
 
     @Override
     public void landedOn(Player p) {
+      super.landedOn(p);
       visited = true;
     }
 
