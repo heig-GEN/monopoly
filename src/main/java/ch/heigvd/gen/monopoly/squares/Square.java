@@ -14,6 +14,6 @@ public abstract class Square {
   }
 
   public void landedOn(Player p) {
-    System.out.println("Player " + p.getName() + " has landed on square " + name);
+    System.out.println(p.getName() + " has landed on square " + name);
   }
 }
