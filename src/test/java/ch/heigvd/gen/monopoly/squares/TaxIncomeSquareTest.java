@@ -16,7 +16,6 @@ public class TaxIncomeSquareTest extends SquareTest {
     player.reduceCash(player.getNetWorth());
     assertEquals(0, player.getNetWorth());
 
-    square.landedOn(player);
     player.setLocation(square);
 
     assertEquals(0, player.getNetWorth());
@@ -27,7 +26,6 @@ public class TaxIncomeSquareTest extends SquareTest {
     player.reduceCash(500);
     assertEquals(1000, player.getNetWorth());
 
-    square.landedOn(player);
     player.setLocation(square);
 
     assertEquals(900, player.getNetWorth());
@@ -39,7 +37,6 @@ public class TaxIncomeSquareTest extends SquareTest {
     player.addCash(1000 * 1000);
     assertEquals(1001500, player.getNetWorth());
 
-    square.landedOn(player);
     player.setLocation(square);
 
     assertEquals(1001500 - 200, player.getNetWorth());

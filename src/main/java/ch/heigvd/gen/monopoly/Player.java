@@ -27,6 +27,7 @@ public class Player {
 
   public void setLocation(Square location) {
     this.location = location;
+    this.location.landedOn(this);
   }
 
   /**
@@ -37,8 +38,8 @@ public class Player {
    */
   public void takeTurn(Cup cup, Board board) {
     cup.roll();
-    this.location = board.getSquare(this.location, cup.getTotal());
     System.out.println(name + " has rolled a total of " + cup.getTotal());
+    setLocation(board.getSquare(this.location, cup.getTotal()));
   }
 
   /**

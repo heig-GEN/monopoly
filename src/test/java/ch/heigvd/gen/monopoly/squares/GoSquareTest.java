@@ -15,7 +15,6 @@ public class GoSquareTest extends SquareTest {
   public void testPlayerLandingOnGoSquareEarnsTwoHundredDollars() {
     int balance = player.getNetWorth();
     player.setLocation(square);
-    square.landedOn(player);
     assertEquals(200 + balance, player.getNetWorth());
   }
 }

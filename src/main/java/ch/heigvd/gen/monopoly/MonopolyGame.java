@@ -42,7 +42,7 @@ public class MonopolyGame {
 
     for (int i = 0; i < numOfPlayer; i++) {
       this.players.add(new Player(
-              String.format("Player #%d", i+1),
+              String.format("Player #%d", i + 1),
               this.board.getInitialSquare()
           )
       );

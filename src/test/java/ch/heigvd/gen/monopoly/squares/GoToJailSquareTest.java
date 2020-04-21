@@ -37,7 +37,6 @@ public class GoToJailSquareTest extends SquareTest {
   @Test
   public void testPlayerLandingOnGoToSquareVisitsJail() {
     player.setLocation(square);
-    square.landedOn(player);
 
     verifySquare.assertVisited();
   }
