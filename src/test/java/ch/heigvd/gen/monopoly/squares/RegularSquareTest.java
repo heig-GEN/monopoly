@@ -15,7 +15,6 @@ public class RegularSquareTest extends SquareTest {
   public void testPlayerDoesNotSeeItsBalanceChange() {
     int balance = player.getNetWorth();
     player.setLocation(square);
-    square.landedOn(player);
     assertEquals(balance, player.getNetWorth());
   }
 }

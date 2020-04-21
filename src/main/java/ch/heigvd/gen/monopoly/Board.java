@@ -31,7 +31,7 @@ public class Board {
           squares.add(new TaxIncomeSquare("Income tax 1"));
           break;
         case 30:
-          squares.add(new GoToJailSquare(squares.get(15)));
+          squares.add(new GoToJailSquare(squares.get(17)));
           break;
         case 35:
           squares.add(new TaxIncomeSquare("Income tax 2"));

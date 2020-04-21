@@ -42,7 +42,7 @@ public class MonopolyGame {
 
     for (int i = 0; i < numOfPlayer; i++) {
       this.players.add(new Player(
-              String.format("Player #%d", numOfPlayer),
+              String.format("Player #%d", i + 1),
               this.board.getInitialSquare()
           )
       );
@@ -71,6 +71,7 @@ public class MonopolyGame {
    */
   public void playGame() {
     do {
+      System.out.println("--- Turn " + (roundCnt + 1) + " ---");
       playRound();
       roundCnt++;
     } while (roundCnt < NUMBER_OF_ROUNDS);
